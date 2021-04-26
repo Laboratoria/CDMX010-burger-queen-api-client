@@ -7,6 +7,9 @@ import {
   Link
 } from "react-router-dom";
 import WaiterBoard from './components/waiter-board';
+import OrdersToDeliver from './components/orders-to-deliver';
+import NewOrder from './components/new-order';
+import Login from './components/login';
 
 
 function App() {
@@ -16,11 +19,11 @@ function App() {
         <h1>Titulo 1</h1>
         <Switch>
         <Route path='/waiter-board'>
-          <waiterBoard />
+          <WaiterBoard />
         </Route>
 
         <Route path='/new-order'>
-          <h1>New Order</h1>
+          <NewOrder />
         </Route>
 
         <Route path='/orders-to-deliver'>
@@ -28,7 +31,7 @@ function App() {
         </Route>
 
         <Route path='/'>
-          <h1>Inicio</h1>
+          <Login />
         </Route>
 
       </Switch>
