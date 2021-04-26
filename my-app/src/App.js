@@ -1,24 +1,39 @@
-import logo from './logo.svg';
 import './style/App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import WaiterBoard from './components/waiter-board';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <h1>Titulo 1</h1>
+        <Switch>
+        <Route path='/waiter-board'>
+          <waiterBoard />
+        </Route>
+
+        <Route path='/new-order'>
+          <h1>New Order</h1>
+        </Route>
+
+        <Route path='/orders-to-deliver'>
+          <OrdersToDeliver />
+        </Route>
+
+        <Route path='/'>
+          <h1>Inicio</h1>
+        </Route>
+
+      </Switch>
+      </div>
+    </Router>
   );
 }
 
