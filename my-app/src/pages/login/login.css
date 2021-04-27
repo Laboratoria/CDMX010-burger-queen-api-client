@@ -1,0 +1,44 @@
+/*LOGIN SCREEN*/
+#container{
+    display: flex;
+    flex-flow: column;
+  }
+  .loginContainer{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .loginLogo{
+    background: url('../../assets/img/logo-BQ.svg')no-repeat;
+    background-size: cover;
+    /* display: flex;*/
+    width: 160px;
+    height: 80px;
+    margin-top: 20px;
+  }
+  .loginText{
+    font-size: 30px;
+    line-height: 34px;
+    text-align: center;
+    color: #FAC710;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .input {
+    width: 315px;
+    height: 44px;
+    background: #FFFFFF;
+    border: 1px solid#FAC710;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+  .loginButton {
+    padding-bottom: inherit;
+    background: #FAC710;
+    border: #FAC710;
+    color: #FFFFFF;
+    font-size: 24px;
+    margin-bottom: 50px;
+  }

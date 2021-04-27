@@ -6,10 +6,10 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import WaiterBoard from './components/waiter-board';
-import OrdersToDeliver from './components/orders-to-deliver';
-import NewOrder from './components/new-order';
-import Login from './components/login';
+import WaiterBoard from './pages/waiter-board/waiter-board';
+import OrdersToDeliver from './pages/orders-to-deliver/orders-to-deliver';
+import NewOrder from './pages/new-order/new-order';
+import Login from './pages/login/login';
 
 
 function App() {

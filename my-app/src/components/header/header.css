@@ -1,0 +1,12 @@
+header{
+    width: 90%;
+    height: 120px;
+    border-bottom: #fff solid 1px;
+    padding: 30px 5%;
+  
+  }
+  .headerLogo{
+    background: url('../../assets/img/logo-BQ.svg')no-repeat;  
+    width: auto;
+    height: 100%;
+  }
