@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Hamburguer API",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
+    "react-router-dom": "^5.2.0"
+  },
   "devDependencies": {
     "jest": "^26.6.3"
   },
@@ -19,5 +23,6 @@
   "bugs": {
     "url": "https://github.com/MiriamNM/CDMX010-burger-queen-api-client/issues"
   },
-  "homepage": "https://github.com/MiriamNM/CDMX010-burger-queen-api-client#readme"
+  "homepage": "https://github.com/MiriamNM/CDMX010-burger-queen-api-client#readme",
+  "keywords": []
 }
