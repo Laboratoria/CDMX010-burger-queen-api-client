@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    height: 60vh;
+    width: 70%;
+    padding: 0 15%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; 
+  }
+  .button-container{
+    width: 30%;
+    padding: 0 10%;
+    text-decoration: none;
+  }
+
+  .button{
+    height: 30vh;
+    width: 45%;
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+  }
