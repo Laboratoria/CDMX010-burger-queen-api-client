@@ -1,8 +1,10 @@
 import React from 'react'
+import Header from './header'
 
 const NewOrder = () => {
     return (
-        <div>
+        <div className="container">
+            <Header />
             <h1>New Order</h1>
         </div>
     )

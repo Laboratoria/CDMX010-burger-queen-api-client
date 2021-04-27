@@ -16,7 +16,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <h1>Titulo 1</h1>
         <Switch>
         <Route path='/waiter-board'>
           <WaiterBoard />
