@@ -1,0 +1,42 @@
+{
+    "workers": [
+        {
+            "worker": [
+                {
+                    "workShift": "morning",
+                    "firstName":"Camila",
+                    "lastName": "Rodriguez",
+                    "phoneNumber": 1800123123,
+                    "email": "camila@queen.com"
+                },
+                {
+                    "workShift": "evening",
+                    "firstName":"Junventivo",
+                    "lastName": "Díaz",
+                    "phoneNumber": 5512341891,
+                    "email": "juventino@queen.com"
+                }
+            ]
+        }
+    ],
+    "products": [
+        {
+            "breakfast": [
+                {
+                    "id": 1,
+                    "product": 2,
+                    "price": 2,
+                    "type": 2
+                }
+            ],
+            "lunch": [
+                {
+                    "id": 1,
+                    "product": 2,
+                    "price": 2,
+                    "type":  2
+                }
+            ]
+        }
+    ]
+} 
