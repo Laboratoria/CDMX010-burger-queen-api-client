@@ -6,9 +6,32 @@
   color: #fff;
 }
 
-.green{
+/* Colores */
+
+.bgGreen{
   background-color: #0CA789;
 }
-
-/* Estilos An */
-
+.bgYellow{
+  background-color: #EAB804;
+}
+.bgWhite{
+  background-color: #fff;
+}
+.bgBlack{
+  background-color: #000;
+}
+.bgOrange{
+  background-color: #FA9710;
+}
+.yellow{
+  color: #FAC710;
+}
+.white{
+  color: #fff;
+}
+.black{
+  color: #000;
+}
+.orange{
+  color: #FA9710;
+}
