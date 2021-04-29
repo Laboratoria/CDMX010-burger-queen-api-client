@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+}
+
+A:link {
+  text-decoration: none;
+  color: yellow;
+}
+
+body {
+  height: 100%;
+  
+  background: black;
+}
+
+/* NEW ORDER */
+
+#logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-waiter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.button-orders {
+  border: 3px solid yellow;
+  background: none;
+
+  width: 170px;
+  height: 35px;
+}
+
+.button-orders a {
+  color: yellow;
+}
+
+.button-orders:hover {
+  background: yellow;
+}
+
+.button-orders:hover a {
+  color: black;
+}
+
+.active {
+  background: yellow;
+  color: black;
+}
+
+.active a{
+  background: yellow;
+  color: black;
+}
+
+A:link:hover {
+  color: black;
+}
+
+p {
+  margin-top: 2em;
+  text-align: center;
+  color: yellow;
+  font-size: 15px;
+}
+
+.main-box {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+
+  margin-top: 2em;  
+}
+
+.box-one {
+  width: 260px;
+  height: 140px;
+
+  background: yellow;
+}
+
+.box-one p {
+  margin-top: 2em;
+  color: black;
+}
+
+.box-two {
+  width: 480px;
+  height: 280px;
+
+  border: 3px solid yellow;
+  background: none;
+}
+
+.box-two p {
+  margin-left: 4em;
+  color: yellow;
+  text-decoration: none;
+
+  text-align: left;
+}
+
+.button-send {
+  border: 3px solid yellow;
+  background: none;
+
+  width: 170px;
+  height: 35px;
+
+  margin-top: 2em; 
+  margin-bottom: 3em;
+}
+
+.button-send a {
+  color: yellow;
+}
+
+.button-send:hover {
+  background: yellow;
+}
+
+A:link:hover {
+  color: black;
+}
+
+.box-send {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 2em;
+}
+
+#total {
+  margin-right: 60%;
+  margin-top: -1em;
+}
+
+/* PENDING ORDER */
+
+.main-box-pending {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.box-one-pending {
+  margin-top: 3em;
+
+  width: 370px;
+  height: 350px;
+
+  background: yellow;
+}
+
+.box-one-pending p {
+  margin-top: 1.5em;
+  color: black;
+}
+
+.box-one-pending, .box-two-pending,
+.box-three-pending, .box-four-pending  h3, h4 {
+  text-align: center;
+}
+
+.done {
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+/* 
+.box-one-pending, .box-two-pending,
+.box-three-pending, .box-four-pending h4 {
+  text-align: center;
+} */
+
+.box-two-pending {
+  margin-top: 3em;
+
+  width: 370px;
+  height: 350px;
+
+  background: yellow;
+}
+
+.box-two-pending p {
+  margin-top: 1.5em;
+  color: black;
+}
+
+.second-box-pending {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+
+  margin-top: -1.5em;
+}
+
+.box-three-pending {
+  margin-top: 3em;
+
+  width: 370px;
+  height: 350px;
+
+  background: yellow;
+}
+
+.box-three-pending p {
+  margin-top: 2em;
+  color: black;
+}
+
+.box-four-pending {
+  margin-top: 3em;
+
+  width: 370px;
+  height: 350px;
+
+  background: yellow;
+}
+
+.box-four-pending p {
+  margin-top: 2em;
+  color: black;
+}
+
+.margin-bottom {
+  margin-top: 3em;
+}
+
+
+/* 
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  } 
+}*/
+
+/*.App-header {
+  background-color: black;
+  /* background-color: #282c34; */
+  /*min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+ */
