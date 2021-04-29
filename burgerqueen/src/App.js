@@ -14,43 +14,43 @@ import {
   export default function App() {
     return (
       <Router>
-          <div>
-          {/* A <Switch> looks through its children <Route>s and
-              renders the first one that matches the current URL. */}
           <Switch>
-            <Route path="/menu">
-              <Menu />
+            <Route path="/RouterForWaiter">
+              <RouterForWaiter />
             </Route>
             <Route path="/">
               <Login />
             </Route>
           </Switch>
-        </div>
       </Router>
     );
   }
   
   const Login = () => {
-    return <div className='login'>
-    <div className='logo'>
-        <h1>Burger Queen</h1>
-        <h2>¡Bienvenidxs!</h2>
-        <img src={logo} className='App-logo' alt='logo' />
-    </div>
-    <form className='formLogin'>
-        <FlavorForm />
-        <input type='name' className='inputLogin'></input>
-        <input type='password' className='inputLogin'></input>
-        <button className='Welcome active'><Link to="/menu">SUBMIT</Link></button>
-    </form>
+    return <div className='login-container'>
+      <div className='logo-welcome'>
+          <img src={logo} className='burgerqueen-logo' alt='logo' />
+          <h2>¡Bienvenidxs!</h2>
+      </div>
+      <div className='form-container'>
+        <form className='formLogin'>
+            <FlavorForm />
+            <input type='name' className='inputLogin'></input>
+            <input type='password' className='inputLogin'></input>
+            <button className='Welcome active'><Link to="/RouterForWaiter">SUBMIT</Link></button>
+        </form>
+      </div>
     </div>
   }
-  
-  class FlavorForm extends React.Component {
+
+  // si vamos a usar clases de React, conocer bien sobre componentes de clase, de react//
+  // cambiar componente de clase por componente de función / TENER FUNCIONES DENTRO DE UNA FUNCION Y EL RETURN DIRECTO / EL CONSTRUCTOR
+  // TAMPOCO EXITE / DE THIS.STATE A USE.STATE / LEER SOBRE STATE DE REACT
+  class FlavorForm extends React.Component {  
       constructor(props) {
         super(props);
         this.state = {value: "Waiter"};
-    
+    //entender .bind / clase / constructor = usando solo fucniones y no clases 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
       }
@@ -80,31 +80,36 @@ import {
       }
     }
   
-const Menu = () => {
-  let match = useRouteMatch();
+
+const RouterForWaiter = () => {
+  // esto es un hook que nos da el match
+  const match = useRouteMatch();
     return  <Router>
-    <div className="div-button-menu">
-    <div id="logo"><img src={logo} className="App-logo" alt="logo" /></div>
-        <div className="button-waiter">
-              <button className="button-orders">
+    <div className="waiter-container">
+    <div className="logo-waiter">
+      <img src={logo} alt="logo" />
+    </div>
+        <div className="container-buttons-order">
+              <button className="button-order">
                 <Link to={`${match.url}/`}>New Order</Link> 
               </button>
-              <button className="button-orders">
+              <button className="button-order">
                 <Link to={`${match.url}/pendingOrder`}>Pending Order</Link> 
               </button>
-              <button className="button-orders">
+              <button className="button-order">
                 <Link to={`${match.url}/doneOrder`}>Done Order</Link> 
               </button>
         </div>
+      {/* //esto subruta pra el menu  */}
       <Switch>      
-        <Route path={`${match.path}/:doneOrder`}> 
+        <Route path={`${match.path}/doneOrder`}> 
           <Users />
         </Route>
-        <Route path={`${match.path}/:pendingOrder`}> 
+        <Route path={`${match.path}/pendingOrder`}> 
           <About />
         </Route>
-        <Route path={match.path}>
-          <Home />
+        <Route path={`${match.path}/`}>
+          <NewOrder />
         </Route>
       </Switch>
     </div>
@@ -112,15 +117,15 @@ const Menu = () => {
 }
 
 // NEW ORDER
-function Home() {
+function NewOrder() {
   return <div>
-    <p>CLIENT_045</p>
+    <p id="client-name">CLIENT_045</p>
     <div className="main-box">
-      <div className="box-one">
+      <div className="box-menus">
         <Link to="/morningOrder"><p>Morning ✔</p></Link>
         <Link to="/allOrder"><p>All day</p></Link>
       </div>
-      <div className="box-two">
+      <div className="select-food-products">
         <p>$5  Café americano</p>
         <p>$7  Café con leche</p>
         <p>$10 Sándwich jamón y queso</p>
@@ -136,7 +141,7 @@ function Home() {
   </div>
 }
 
-// DONE ORDER
+// DONE ORDER // renombrar por -> OrdenDetail + Order
 function Users() {
   return <div>
   {/* <p>CLIENT_047</p> */}
@@ -171,6 +176,7 @@ function Users() {
       <p className="done">✔</p>
     </div>
     <div className="box-three-pending">
+    {/* EMPLEAR EL CONCEPTO DE RENDERIZAR LISTAS DE COMPONENTES EN REACT*/}
       <h3>Morning</h3>
       <h4>CLIENT-041</h4>
       <p>$5  Café americano</p>
@@ -188,7 +194,7 @@ function Users() {
 // PENDING ORDER
 function About() {
   return <div>
-    {/* <p>CLIENT_047</p> */}
+    {/* TENER SOLO 1 COMPONENTE QUE NOS MUESTRE LAS TARJETAS DE LAS ORDENES Y QUE VAYA CAMBIENDO CON LOS PROPS O PROPIEDADES QUE TIENE EL COMPONENTE  */}
     <div className="main-box-pending">
       <div className="box-one-pending">
         <h3>Morning</h3>
@@ -229,102 +235,6 @@ function About() {
     </div>
   </div>
 }
-
-
-
-    // <div className="div-menu">
-    //     <div id="logo"><img src={logo} className="logo" alt="logo" /></div>
-    //     <div className="button-waiter">
-    //         <button className="button-orders active">
-    //             <Link to="/">New Order</Link>
-    //         </button>
-    //         <button className="button-orders">
-    //             <Link to="/pendingOrder">Pending Order</Link>
-    //         </button>
-    //         <button className="button-orders">
-    //             <Link to="/doneOrder">Done Order</Link>
-    //         </button>
-    //     </div>
-    // </div>
-
-
-// function MenuAllDay() {
-//   return <div>
-//     <p>CLIENT_045</p>
-//     <div className="main-box">
-//       <div className="box-one">
-//         <Link to="/morningOrder"><button>Morning</button></Link>
-//         <Link to="/allOrder"><button>All day ✔</button></Link>
-//       </div>
-//       <div className="box-two">
-//         <p>$10  Hamburguesa simple</p>
-//         <p>$15  Hamburguesa doble</p>
-//         <p>$5 Papas fritas</p>
-//         <p>$5 Aros de cebolla</p>
-//         {/* <p>$5 Agua 500ml</p>
-//         <p>$7 Agua 750ml</p> */}
-//       </div>
-//     </div>
-//     <p className="total">Total: $</p>
-//     <div className="box-send">
-//       <button className="button-send">
-//                 <Link to="/doneOrder">ENVIAR</Link>
-//       </button>
-//     </div>
-//   </div>
-// }
-
-
-
-// export default function App() {
-//   return (
-    // <Router>
-    //   <div className="div-button-menu">
-    //   <div id="logo"><img src={logo} className="App-logo" alt="logo" /></div>
-    //       <div className="button-waiter">
-    //             <button className="button-orders">
-    //               <Link to="/">New Order</Link>
-    //             </button>
-    //             <button className="button-orders">
-    //               <Link to="/pendingOrder">Pending Order</Link>
-    //             </button>
-    //             <button className="button-orders">
-    //               <Link to="/doneOrder">Done Order</Link>
-    //             </button>
-    //      </div>
-    //     <Switch>
-    //       <Route path="/pendingOrder">
-    //         <About />
-    //       </Route>
-    //       <Route path="/doneOrder">
-    //         <Users />
-    //       </Route>
-    //       {/* <Route path="/MenuAllDay">
-    //         <MenuAllDay />
-    //       </Route> */}
-    //       <Route path="/">
-    //         <Home />
-    //       </Route>
-    //     </Switch>
-    //   </div>
-    // </Router>
-//   );
-// }
-
-
-
-// import React from "react";
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link
-// } from "react-router-dom";
-// import logo from './assets/logo-burgerqueen.png';
-// import './App.css';
-
-
-
 
 
 // import logo from './logo.svg';

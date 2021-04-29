@@ -8,44 +8,150 @@ A:link {
 }
 
 body {
-  height: 100%;
+  /* height: 100%;
+  width: 100%; */
   
   background: black;
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* NEW ORDER */
+/* WAITER LOGIN */
 
-#logo {
+.login-container {
+  /* width: 300px;
+  height: 500px; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -10%; */
+}
+
+.logo-welcome img {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+
+  margin-bottom: -30px;
+  z-index: -5;
+}
+
+.logo-welcome h2{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  padding-bottom: 1em;
+  /* padding-top: -100px; */
+
+  color: yellow;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+/* .burgerqueen-logo {
+  margin-bottom: -20px;
+} */
+
+/* .form-container {
+
+} */
+
+.formLogin {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Welcome {
+  border: 3px solid yellow;
+  background: none;
+  width: 170px;
+  height: 35px;
+  margin-top: .7em;
+
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.inputLogin {
+  background: black;
+  border-color: yellow;
+  width: 170px;
+  height: 35px;
+  margin-top: .7em;
+}
+
+.checkboxLogin {
+  background: black;
+  border-color: yellow;
+  width: 170px;
+  height: 35px;
+  margin-top: .7em;
+  
+  color: yellow;
+  /* background: black;
+  color: yellow;
+  border: 3px solid yellow;
+  width: 170px;
+  height: 35px;
+  margin-bottom: .15em;
+  text-align: center; */
+}
+/* 
+.checkboxLogin option {
+  text-align: center;
+}
+
+.text-checkboxLogin {
+ text-align: center;
+} */
+
+
+
+/* WAITER ORDERS */
+
+.logo-waiter {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.button-waiter {
+.container-buttons-order {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.button-orders {
+.button-order {
   border: 3px solid yellow;
   background: none;
 
   width: 170px;
   height: 35px;
+
+  font-weight: 600;
+  font-size: 15px;
 }
 
-.button-orders a {
+.button-order a {
   color: yellow;
 }
 
-.button-orders:hover {
+.button-order:hover {
   background: yellow;
 }
 
-.button-orders:hover a {
+.button-order:hover a {
   color: black;
 }
 
@@ -70,6 +176,10 @@ p {
   font-size: 15px;
 }
 
+#client-name {
+  font-weight: 600;
+}
+
 .main-box {
   display: flex;
   flex-direction: row;
@@ -79,19 +189,21 @@ p {
   margin-top: 2em;  
 }
 
-.box-one {
+.box-menus {
   width: 260px;
   height: 140px;
 
   background: yellow;
 }
 
-.box-one p {
+.box-menus p {
   margin-top: 2em;
   color: black;
+
+  font-weight: 300;
 }
 
-.box-two {
+.select-food-products {
   width: 480px;
   height: 280px;
 
@@ -99,12 +211,13 @@ p {
   background: none;
 }
 
-.box-two p {
+.select-food-products  p {
   margin-left: 4em;
   color: yellow;
   text-decoration: none;
 
   text-align: left;
+  font-weight: 400;
 }
 
 .button-send {
@@ -116,6 +229,9 @@ p {
 
   margin-top: 2em; 
   margin-bottom: 3em;
+
+  font-weight: 600;
+  font-size: 15px;
 }
 
 .button-send a {
@@ -126,7 +242,7 @@ p {
   background: yellow;
 }
 
-A:link:hover {
+.button-send:hover a {
   color: black;
 }
 
@@ -139,9 +255,11 @@ A:link:hover {
   margin-top: 2em;
 }
 
-#total {
+.total {
   margin-right: 60%;
   margin-top: -1em;
+
+  font-weight: 700;
 }
 
 /* PENDING ORDER */
