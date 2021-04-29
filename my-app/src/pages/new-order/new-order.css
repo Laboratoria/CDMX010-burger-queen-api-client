@@ -7,9 +7,7 @@
     margin-top: 50px;
     align-items: center;
 }
-.yellow-button {
-    background-color: #FAC710;
-    color: #fff;
+.buttonSmall {
     border: none;
     height: 50px;
 }
@@ -23,17 +21,7 @@
     grid-column: 4/6;
     min-height: 50vh;
 }
-.yellow {
-    background-color: #FAC710;
-    color: #fff;
-}
-.green {
-    background-color: #0CA789;
-    color: #fff;
-}
-.whiteBackgroud {
-    background-color: #fff;
-}
+
 .title-table{
     margin: 0;
     padding: 10px;
@@ -49,7 +37,13 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 10px;
+    padding: 15px 0;
 }
 .table-container {
     padding: 5%;
+}
+.add{
+    width: 40px;
+    height: 40px;
+    border: none;
 }
