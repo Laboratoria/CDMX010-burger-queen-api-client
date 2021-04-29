@@ -1,0 +1,49 @@
+.grid {
+    width: 90%;
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    margin-top: 50px;
+    align-items: center;
+}
+.buttonSmall {
+    border: none;
+    height: 50px;
+}
+.menu {
+    border: 1px solid #fff;
+    grid-column: 1/4;
+    min-height: 50vh;
+}
+.final-order {
+    border: 1px solid #fff;
+    grid-column: 4/6;
+    min-height: 50vh;
+}
+
+.title-table{
+    margin: 0;
+    padding: 10px;
+}
+.products-list {
+    min-height: 40vh;
+}
+.text-black {
+    color: black;
+}
+.product-container {
+    border-bottom: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    padding: 15px 0;
+}
+.table-container {
+    padding: 5%;
+}
+.add{
+    width: 40px;
+    height: 40px;
+    border: none;
+}
