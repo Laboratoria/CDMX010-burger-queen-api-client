@@ -40,7 +40,7 @@ export default function App() {
          <p className="total">Total: $</p>
          <div className="box-send">
             <button className="button-send">
-                      <Link to="/doneOrder">ENVIAR</Link>
+              <Link to="/doneOrder">ENVIAR</Link>
             </button>
          </div>
         {/* A <Switch> looks through its children <Route>s and

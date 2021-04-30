@@ -1,10 +1,13 @@
 import React from "react";
-import Order from "./Order"
-// import logo from '../assets/logo-burgerqueen.png';
+// import Order from "./order";
+import Order from "./Order";
 
 function DoneOrder() {
-    return <Order />
-  }
-  
+  return <Order />
+}
+
 export default DoneOrder;
+
+
+
 

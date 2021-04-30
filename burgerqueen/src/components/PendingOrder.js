@@ -1,6 +1,6 @@
 import React from "react";
 // import Order from "./order";
-import Order from "./Order"
+import Order from "./Order";
 
 function PendingOrder() {
   return <Order />
