@@ -9,10 +9,10 @@ import {
 } from "react-router-dom";
   import logo from './assets/logo-burgerqueen.png';
   import './App.css';
-  import Login from "./Components/Welcome";
-  import NewOrder from "./Components/NewOrder";
-  import DoneOrder from "./Components/DoneOrder";
-  import PendingOrder from "./Components/PendingOrder";
+  import Login from "./components/Welcome";
+  import NewOrder from "./components/NewOrder";
+  import DoneOrder from "./components/DoneOrder";
+  import PendingOrder from "./components/PendingOrder";
   
 export default function App() {
   return (
