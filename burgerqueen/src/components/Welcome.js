@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Link,
 } from "react-router-dom";
+import './Welcome.css';
 import logo from '../assets/logo-burgerqueen.png';
 
 const Login = () => {
@@ -16,7 +17,7 @@ const Login = () => {
           {/* <FlavorForm /> */}
           <input type='text' className='inputLogin' placeholder="hola@queen.com"></input>
           <input type='password' className='inputLogin' placeholder="********"></input>
-          <button className='Welcome active'><Link to="/RouterForWaiter">SUBMIT</Link></button>
+          <button className='Welcome'><Link to="/RouterForWaiter">SUBMIT</Link></button>
       </form>
     </div>
   </div>

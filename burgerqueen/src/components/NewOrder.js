@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Link,
 } from "react-router-dom";
+import './NewOrder.css';
 // import logo from '../assets/logo-burgerqueen.png';
 
 // NEW ORDER
