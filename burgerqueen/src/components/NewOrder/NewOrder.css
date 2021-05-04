@@ -23,19 +23,22 @@
   
     font-weight: 600;
     font-size: 15px;
-  }
-  
-  .button-order a {
+
     color: yellow;
   }
   
+  /* .button-order a {
+    color: black;
+  } */
+  
   .button-order:hover {
     background: yellow;
-  }
-  
-  .button-order:hover a {
     color: black;
   }
+  
+  /* .button-order:hover a {
+    color: black;
+  } */
   
   .active {
     background: yellow;

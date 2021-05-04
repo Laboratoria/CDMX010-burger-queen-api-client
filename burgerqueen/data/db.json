@@ -4,14 +4,14 @@
             "worker": [
                 {
                     "workShift": "morning",
-                    "firstName":"Camila",
+                    "firstName": "Camila",
                     "lastName": "Rodriguez",
                     "phoneNumber": 1800123123,
                     "email": "camila@queen.com"
                 },
                 {
                     "workShift": "evening",
-                    "firstName":"Junventivo",
+                    "firstName": "Junventivo",
                     "lastName": "Díaz",
                     "phoneNumber": 5512341891,
                     "email": "juventino@queen.com"
