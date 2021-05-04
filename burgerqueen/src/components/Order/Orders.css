@@ -1,0 +1,36 @@
+/* PENDING ORDER */
+
+.main-box-pending {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+  
+  .box-pending-order h3, h4 {
+    text-align: center;
+  }
+  
+  .done {
+    font-size: 17px;
+    font-weight: 700;
+  }
+  
+  .box-pending-order {
+    margin-top: 3em;
+  
+    width: 370px;
+    height: 350px;
+  
+    background: yellow;
+  }
+  
+  .box-pending-order p {
+    margin-top: 2em;
+    color: black;
+  }
+  
+  .margin-bottom {
+    margin-top: 3em;
+  }
+  
