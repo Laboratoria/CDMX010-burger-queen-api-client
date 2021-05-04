@@ -17,7 +17,7 @@ const Order = ({pending, done}) => {
                     <p>$10 Sándwich jamón y queso</p>
                     <p>$7 Jugo de frutas</p>
                     {done &&
-                        <p>DONE</p>
+                        <p>Done</p>
                     }
                 </div>
                 <div id="rootOrder"></div>
