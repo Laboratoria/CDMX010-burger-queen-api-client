@@ -16,13 +16,25 @@ const NewOrder = () => {
             <Link to="/allOrder"><p>All day</p></Link>
           </div>
           <div className="select-food-products">
-            <p>$5  Café americano</p>
-            <p>$7  Café con leche</p>
-            <p>$10 Sándwich jamón y queso</p>
-            <p>$7 Jugo de frutas</p>
+            <div className="products-line">
+              <button className="button-products">$5  Café americano</button>
+              <button className="button-product-signal">-</button><p>1</p>
+            </div>
+            <div className="products-line">
+              <button className="button-products">$7  Café con leche</button>
+              <button className="button-product-signal">-</button><p>1</p>
+            </div>
+            <div className="products-line">
+              <button className="button-products">$10 Sándwich jamón y queso</button>
+              <button className="button-product-signal">-</button><p>1</p>
+            </div>
+            <div className="products-line">
+              <button className="button-products">$7 Jugo de frutas</button>
+              <button className="button-product-signal">-</button><p>1</p>
+            </div>
           </div>
         </div>
-        <p className="total">Total: $</p>
+        <p className="total">Total: $ 29</p>
         <div className="box-send-waiter">
           <button className="button-send-waiter">
             <Link to="/doneOrder">ENVIAR</Link>

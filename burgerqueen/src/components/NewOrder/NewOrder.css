@@ -89,20 +89,90 @@
   }
   
   .select-food-products {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+
     width: 480px;
     height: 280px;
   
     border: 3px solid yellow;
     background: none;
+
+    padding-top: 5px;
+    padding-left: 8px;
+    padding-right: 5px;
+    padding-bottom: 5px;
   }
   
-  .select-food-products  p {
-    margin-left: 4em;
+  .products-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  .products-line p {
+    margin-top: 15px;
+    margin-left: 30px;
+
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .button-products {
     color: yellow;
     text-decoration: none;
-  
-    text-align: left;
+    background-color: black;
+
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding-left: 4px;
+
+    font-size: 18px;
     font-weight: 400;
+    text-align: left;
+
+    border:none;
+
+    width: 250px;
+
+    cursor: pointer;
+  }
+
+  .button-product-signal {
+    color: yellow;
+    text-decoration: none;
+    background: black;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    /* border: 1px solid yellow; */
+
+    margin-left: 60px;
+    margin-bottom: 5px;
+
+    cursor: pointer;
+    
+    /* width: 20px;
+    height: 20px; */
+  }
+
+  .button-product-signal:hover {
+    color: black;
+    background: yellow;
+  }
+
+  .button-products:hover {
+    background-color: yellow;
+    color: black;
+
+    /* margin-left: 10px; */
+
+    width: 250px;
   }
   
   .button-send-waiter {
@@ -145,4 +215,5 @@
     margin-top: -1em;
   
     font-weight: 700;
+    font-size: 18px;
   }

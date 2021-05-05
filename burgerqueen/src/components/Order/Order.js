@@ -2,13 +2,14 @@ import React from "react";
 
 import './Orders.css';
 
-const Order = ({pending, done}) => {
+const Order = ({props, pending, done}) => {
     return (
         <div>
             <div className="main-box-pending">
                 <div className="box-pending-order">
                     <h3>MORNING</h3>
                     <h4>CLIENT-048</h4>
+                    {/* <p>{props.db.workers.worker.firstName}</p> */}
                     <p>$5  Café americano</p>
                     <p>$7  Café con leche</p>
                     <p>$10 Sándwich jamón y queso</p>

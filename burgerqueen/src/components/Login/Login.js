@@ -16,7 +16,7 @@ const Login = () => {
       </div>
       <div className='form-container'>
         <form className='formLogin'>
-            <input type='text' className='inputLogin' placeholder="hola@queen.com"></input>
+            <input type='text' className='inputLogin' placeholder="miri@queen.com"></input>
             <input type='password' className='inputLogin' placeholder="********"></input>
             <button className='Welcome'><Link to="/dashboard-waiter">SUBMIT</Link></button>
         </form>
