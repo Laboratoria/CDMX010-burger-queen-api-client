@@ -28,4 +28,3 @@ export default function App() {
   // si vamos a usar clases de React, conocer bien sobre componentes de clase, de react//
   // cambiar componente de clase por componente de función / TENER FUNCIONES DENTRO DE UNA FUNCION Y EL RETURN DIRECTO / EL CONSTRUCTOR
   // TAMPOCO EXITE / DE THIS.STATE A USE.STATE / LEER SOBRE STATE DE REACT
-
