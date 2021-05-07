@@ -12,8 +12,8 @@ const NewOrder = () => {
       <p id="client-name">CLIENT_045</p>
       <div className="main-box">
          <div className="box-menus">
-          <Link to="/morningOrder"><p>Morning</p></Link>
-          <Link to="/allOrder"><p>All day</p></Link>
+          <button className="button-box-menu" to="/morningOrder"><p>Morning</p></button>
+          <button className="button-box-menu" to="/allOrder"><p>All day</p></button>
          </div>
          <div className="select-food-products">
            <div className="products-line">
