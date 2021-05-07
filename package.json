@@ -8,7 +8,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "fake-api": "json-server --watch burgerqueen/src/data/db.json --port 5000"
   },
   "repository": {
     "type": "git",
