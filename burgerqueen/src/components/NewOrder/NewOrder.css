@@ -250,3 +250,29 @@
     font-weight: 700;
     font-size: 18px;
   }
+
+.clientName {
+  color: yellow;
+}
+
+.inputClient {
+  color: yellow;
+  background: black;
+  border: none;
+}
+
+.totalLabel {
+  color: yellow;
+}
+
+.totalInput {
+  color: yellow;
+  background: black;
+  border: none;
+}
+
+.inputNumItem {
+  color: yellow;
+  background: black;
+  border: none;
+}
