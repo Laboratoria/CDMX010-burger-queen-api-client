@@ -24,7 +24,8 @@ const ApiBreakfast =()=>{
                 breakfast.map((items) => {
                     return<div className='products-line-2'>
                         <button className="button-products-2">${items.price} {items.item}</button>
-                        <button className="button-product-signal-2">-</button><p>1</p>
+                        <button className="button-product-signal-2">-</button>
+                        <input type="value" className="inputNumItem"></input>
                     </div>
                 })
             }

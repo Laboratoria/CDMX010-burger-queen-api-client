@@ -21,7 +21,8 @@ const NewOrder = () => {
 
   return (
     <div>
-      <p id="client-name">CLIENT_045</p>
+      <label htmlFor="name" className="clientName">Name: </label>
+      <input type="name" className="inputClient" />
       <div className="main-box">
          <div className="box-menus">
           <button className='button-box-menu' onClick={handlerBreakfast}><p>Morning</p></button>
@@ -38,7 +39,8 @@ const NewOrder = () => {
           </div>
          </div>
       </div>
-      <p className="total">Total: $ 29</p>
+      <label htmlFor="value" className="totalLabel">Total: </label>
+      <input type="value" className="totalInput"></input>
       <div className="box-send-waiter">
          <button className="button-send-waiter">
             <Link to="/doneOrder">ENVIAR</Link>
