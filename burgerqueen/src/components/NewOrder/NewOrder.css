@@ -252,13 +252,24 @@
   }
 
 .clientName {
-  color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: yellow;
+
+    margin-top: 30px;
+    margin-bottom: -15px;
 }
 
 .inputClient {
   color: yellow;
   background: black;
   border: none;
+}
+
+#total {
+  margin-top: 80px;
 }
 
 .totalLabel {
