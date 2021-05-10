@@ -8,8 +8,6 @@ import logo from '../../assets/logo-burgerqueen.png';
 
 const DashboardWaiter = () => {
     const [view, setView] = useState('new'); 
-    const [pending] = useState('pending');
-    const [done] = useState('done');
 
     return (
         <div className="waiter-container">
@@ -30,12 +28,12 @@ const DashboardWaiter = () => {
             { (view === 'new') &&
                 <NewOrder />
             }
-            { (view === 'pending') &&
-                <Order pending={pending}/>
+            {/* { (view === 'pending') &&
+                <Order />
             } 
             { (view === 'done') &&
-                <Order done={done}/>
-            }
+                <Order />
+            } */}
         </div> 
     )
 };

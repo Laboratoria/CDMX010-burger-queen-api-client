@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import ApiBreakfast from "../apiBreakfast/ApiBreakfast"
 import ApiLunch from "../apiLunch/ApiLunch"
+import ObjectOrderLunch from "../crudAPI/CrudApiLunch";
 import './NewOrder.css';
 
 const NewOrder = () => {
@@ -42,7 +43,7 @@ const NewOrder = () => {
       <label htmlFor="value" className="totalLabel">Total: </label>
       <input type="value" className="totalInput"></input>
       <div className="box-send-waiter">
-         <button className="button-send-waiter">
+         <button type ="submit" className="button-send-waiter" onClick={ObjectOrderLunch}>
             <Link to="/doneOrder">ENVIAR</Link>
          </button>
       </div>
