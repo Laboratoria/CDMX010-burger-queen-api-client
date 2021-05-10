@@ -18,17 +18,15 @@ const OrderInformation=()=>{
     fetchApi()
   }, [])
   return(
-    <div>
       <>
         {!breakfast ? 'cargando...'
         :breakfast.map((breakfast, index) => {
           return <div className="box-pending-order-product">
-          {breakfast.price}   {breakfast.item}
+          ${breakfast.price}  {breakfast.item}
             </div>
         })
         }
       </>
-    </div>
   )
 }
 
