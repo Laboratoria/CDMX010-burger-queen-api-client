@@ -18,7 +18,7 @@ const DashboardWaiter = () => {
     },[])
         
     useEffect(() =>{
-        fetch(`${process.env.REACT_APP_API_URL}/launch`)
+        fetch(`${process.env.REACT_APP_API_URL}/lunch`)
             .then(response => response.json())
             .then(data => setLunch(data))
     },[])
