@@ -1,4 +1,6 @@
-import React from "react";
+import React from "react"
+import Timer from './Timer';
+import OrderInformation from './OrderInformation';
 
 import './Orders.css';
 
@@ -13,6 +15,7 @@ const Order = (props) => {
                     <p>{props.item}</p>
                     <p>{props.price}</p>
                     <p>{props.totalPrice}</p>
+
                 </div>
             </div>
             <div className="margin-bottom"></div>

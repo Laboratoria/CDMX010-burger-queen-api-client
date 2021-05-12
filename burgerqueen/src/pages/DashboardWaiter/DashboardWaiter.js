@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useState } from 'react';
 
 import NewOrder from '../../components/NewOrder/NewOrder';
-import Order from '../../components/Order/Order';
 
 import logo from '../../assets/logo-burgerqueen.png';
 
@@ -42,12 +41,6 @@ const DashboardWaiter = () => {
             { (view === 'new') &&
                 <NewOrder breakfast={breakfast} lunch={lunch} />
             }
-            {/* { (view === 'pending') &&
-                <Order />
-            } 
-            { (view === 'done') &&
-                <Order />
-            } */}
         </div> 
     )
 };

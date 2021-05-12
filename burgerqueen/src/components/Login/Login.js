@@ -1,7 +1,7 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import {
-  BrowserRouter as Router,
-  Link,
+  BrowserRouter as Router, Link,
 } from "react-router-dom";
 
 import logo from '../../assets/logo-burgerqueen.png';
