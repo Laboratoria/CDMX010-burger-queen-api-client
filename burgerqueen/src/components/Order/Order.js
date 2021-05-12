@@ -1,6 +1,5 @@
 import React from "react"
 import Timer from './Timer';
-import OrderInformation from './OrderInformation';
 
 import './Orders.css';
 

@@ -1,7 +1,5 @@
 import Product from "../Product";
 
-import './apiBreakfast.css';
-
 const ApiBreakfast =(props)=>{
     return(
         <div className="select-food-products-2">

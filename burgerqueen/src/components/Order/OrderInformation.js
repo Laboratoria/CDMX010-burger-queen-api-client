@@ -1,6 +1,4 @@
-// import React from "react";
 import React,{useState,useEffect} from 'react';
-// import db from "../../data/db.json"
 
 import './Orders.css';
 

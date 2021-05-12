@@ -10,14 +10,6 @@
   .box-pending-order h3, h4 {
     text-align: center;
   }
-
-  /* .box-pending-order p {
-    line-height: 5px;
-    font-size: 18px;
-    text-align: left;
-
-    margin-left: 50px;
-  } */
   
   .timer {
     /* display: flex;
@@ -54,7 +46,6 @@
   }
   
   .box-pending-order-product {
-    /* margin-top: 2em; */
     color: black;
 
     line-height: 30px;
