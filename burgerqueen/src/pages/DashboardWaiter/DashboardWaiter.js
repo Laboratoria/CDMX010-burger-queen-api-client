@@ -5,10 +5,17 @@ import NewOrder from '../../components/NewOrder/NewOrder';
 
 import logo from '../../assets/logo-burgerqueen.png';
 
+
 const DashboardWaiter = () => {
     const [view, setView] = useState('new'); 
     const [breakfast, setBreakfast] = useState([]);
     const [lunch, setLunch] = useState([]);
+    const [list, setList] = useState({
+        client:"",
+        items:[],
+        total:0,
+        status:"pending",
+    });
 
     useEffect(()=>{
         fetch(`${process.env.REACT_APP_API_URL}/breakfast`)
@@ -39,8 +46,11 @@ const DashboardWaiter = () => {
                     </button>
             </div>
             { (view === 'new') &&
-                <NewOrder breakfast={breakfast} lunch={lunch} />
+                <NewOrder breakfast={breakfast} lunch={lunch} setList={setList} list={list}/>
             }
+            {/* { (view === 'pending') &&
+                <Order setList={setList} list={list} />
+            } */}
         </div> 
     )
 };
