@@ -10,7 +10,35 @@
   .box-pending-order h3, h4 {
     text-align: center;
   }
+
+  /* .box-pending-order p {
+    line-height: 5px;
+    font-size: 18px;
+    text-align: left;
+
+    margin-left: 50px;
+  } */
   
+  .timer {
+    /* display: flex;
+    align-items: flex-start;
+    justify-content: center; */
+    z-index: 5;
+
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+
+    background: black;
+    color: yellow;
+
+    width: 130px;
+    height: 20px;
+
+    margin: 0 auto;
+    margin-top: 75px;
+  }
+
   .done {
     font-size: 17px;
     font-weight: 700;
@@ -25,12 +53,25 @@
     background: yellow;
   }
   
-  .box-pending-order p {
-    margin-top: 2em;
+  .box-pending-order-product {
+    /* margin-top: 2em; */
+    color: black;
+
+    line-height: 30px;
+    font-size: 19px;
+    text-align: left;
+
+    margin-left: 50px;
+  }
+
+  .box-pending-order-product {
+    list-style: none;
+
+    font-size: 18px;
+    font-weight: 400;
     color: black;
   }
   
   .margin-bottom {
     margin-top: 3em;
   }
- 
