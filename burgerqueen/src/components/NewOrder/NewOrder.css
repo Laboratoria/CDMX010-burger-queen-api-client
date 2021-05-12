@@ -24,20 +24,14 @@
     font-size: 15px;
 
     color: yellow;
+
+    cursor: pointer;
   }
-  
-  /* .button-order a {
-    color: black;
-  } */
   
   .button-order:hover {
     background: yellow;
     color: black;
   }
-  
-  /* .button-order:hover a {
-    color: black;
-  } */
   
   .active {
     background: yellow;
@@ -53,14 +47,7 @@
     color: black;
   }
   
-  p {
-    margin-top: 2em;
-    text-align: center;
-    color: yellow;
-    font-size: 15px;
-  }
-  
-  #client-name {
+.clientName {
     font-weight: 600;
   }
   
@@ -75,138 +62,41 @@
   
   .box-menus {
     width: 260px;
-    height: 140px;
-  
-    background: yellow;
+    height: 80px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    /* margin-left: 5%; */
-  }
-  
-  /* .box-menus p {
-    margin-top: 2em;
-    color: black;
-  
-    font-weight: 300;
-  } */
-
-  .button-box-menu {
-    border: none;
-    background: none;
-
-    height: 45px;
-    width: 70px;
-  }
-
-  .button-box-menu p {
-    color: black;
-    font-weight: 400;
-    font-size: 16px;
-  }
-
-  /* .box-menus button p{
-    color: black;
-
-    font-weight: 300;
+    margin-right: 30px;
+    /* margin-bottom: -20px; */
   }
 
   .button-box-menu {
-    text-decoration: none;
-    style: none;
-    background-color: black; 
-  } */
-  
-  /* .select-food-products {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: left;
-
-    width: 480px;
-    height: 280px;
-  
     border: 3px solid yellow;
     background: none;
 
-    padding-top: 5px;
-    padding-left: 8px;
-    padding-right: 5px;
-    padding-bottom: 5px;
+    width: 270px;
+    height: 35px;
+
+    cursor: pointer;
   }
-  
-  .products-line {
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
+
+  .button-box-menu p {
+    color: yellow;
+
+    z-index: 5;
+
+    margin: auto 0; 
   }
-  
-  .products-line p {
+
+  #button-box-menu {
     margin-top: 15px;
-    margin-left: 30px;
-
-    font-size: 18px;
-    font-weight: 400;
-  } */
-
-  .button-products {
-    color: yellow;
-    text-decoration: none;
-    background-color: black;
-
-    margin-top: 5px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    padding-left: 4px;
-
-    font-size: 18px;
-    font-weight: 400;
-    text-align: left;
-
-    border:none;
-
-    width: 250px;
-
-    cursor: pointer;
   }
 
-  .button-product-signal {
-    color: yellow;
-    text-decoration: none;
-    background: black;
-
-    font-size: 20px;
-    font-weight: 800;
-
-    /* border: 1px solid yellow; */
-    border: none;
-
-    margin-left: 60px;
-    margin-bottom: 5px;
-
-    cursor: pointer;
-    
-    /* width: 20px;
-    height: 20px; */
-  }
-
-  .button-product-signal:hover {
-    color: black;
+  .button-box-menu:hover {
     background: yellow;
-    /* border: 1px solid yellow; */
-  }
-
-  .button-products:hover {
-    background-color: yellow;
     color: black;
+  } 
 
-    /* font-size: 20px;
-    font-weight: 600; */
-
-    width: 250px;
+  .button-box-menu:hover p {
+    color: black;
   }
   
   .button-send-waiter {
@@ -223,6 +113,8 @@
     font-size: 15px;
     
     color: yellow;
+
+    cursor: pointer;
   }
   
   .button-send-waiter a {
@@ -240,15 +132,7 @@
     justify-content: center;
     align-items: center;
   
-    margin-top: 2em;
-  }
-  
-  .total {
-    margin-right: 60%;
-    margin-top: -1em;
-  
-    font-weight: 700;
-    font-size: 18px;
+    margin-top: -.3em;;
   }
 
 .clientName {
@@ -269,7 +153,14 @@
 }
 
 #total {
-  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+
+  margin-right: 60%;
+  margin-top: 30px;
+
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .totalLabel {
@@ -286,4 +177,102 @@
   color: yellow;
   background: black;
   border: none;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .container-buttons-order {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; */
+    display: none;
+  }
+
+  /* .button-order {
+    border: 3px solid yellow;
+    background: none;
+  
+    width: 340px;
+    height: 100px;
+  
+    font-weight: 600;
+    font-size: 15px;
+
+    color: yellow;
+
+    cursor: pointer;
+
+    margin-bottom: 8px;
+  } */
+  
+  /* .button-order:hover {
+    background: yellow;
+    color: black;
+  }
+  
+  .active {
+    background: yellow;
+    color: black;
+  }
+  
+  .active a{
+    background: yellow;
+    color: black;
+  }
+  
+  A:link:hover {
+    color: black;
+  } */
+  
+  .clientName {
+    font-weight: 600;
+
+    margin-top: -30px;
+  }
+  
+  .main-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .box-menus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 440px;
+    height: 250px;
+  }
+
+  .button-box-menu {
+    width: 270px;
+    height: 80px;
+
+    border: 3px solid yellow;
+    background: none;
+  }
+
+  .button-box-menu p {
+    color: yellow;
+  }
+
+  .button-box-menu:hover {
+    background: yellow;
+  }
+
+  .button-box-menu:hover p {
+    color: black
+  }
+   
+  #total {
+    margin: auto 0;
+    margin-top: 30px;
+
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
 }
