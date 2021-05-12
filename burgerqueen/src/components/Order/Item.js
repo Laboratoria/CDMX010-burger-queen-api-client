@@ -3,7 +3,7 @@ import React from "react";
 const Item = (props) => {
 return(
 <>
-{props.item.name}
+{props.item.item}
 </>
 )}
 
