@@ -1,5 +1,285 @@
 /* WAITER ORDERS */
 .logo-waiter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-buttons-order {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.button-order {
+  border: 3px solid yellow;
+  background: none;
+
+  width: 170px;
+  height: 35px;
+
+  font-weight: 600;
+  font-size: 15px;
+
+  color: yellow;
+
+  cursor: pointer;
+}
+
+.button-order:hover {
+  background: yellow;
+  color: black;
+}
+
+.active {
+  background: yellow;
+  color: black;
+}
+
+.active a{
+  background: yellow;
+  color: black;
+}
+
+A:link:hover {
+  color: black;
+}
+
+.clientName {
+  font-weight: 600;
+}
+
+.main-box {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+
+  margin-top: 2em;  
+}
+
+.box-menus {
+  width: 260px;
+  height: 80px;
+
+  margin-right: 30px;
+  /* margin-bottom: -20px; */
+}
+
+.button-box-menu {
+  border: 3px solid yellow;
+  background: none;
+
+  width: 270px;
+  height: 35px;
+
+  cursor: pointer;
+}
+
+.button-box-menu p {
+  color: yellow;
+
+  z-index: 5;
+
+  margin: auto 0; 
+}
+
+#button-box-menu {
+  margin-top: 15px;
+}
+
+.button-box-menu:hover {
+  background: yellow;
+  color: black;
+} 
+
+.button-box-menu:hover p {
+  color: black;
+}
+
+.button-send-waiter {
+  border: 3px solid yellow;
+  background: none;
+
+  width: 170px;
+  height: 35px;
+
+  margin-top: 2em; 
+  margin-bottom: 3em;
+
+  font-weight: 600;
+  font-size: 15px;
+  
+  color: yellow;
+
+  cursor: pointer;
+}
+
+.button-send-waiter a {
+  color: yellow;
+}
+
+.button-send-waiter:hover {
+  background: yellow;
+  color: black;
+}
+
+.box-send-waiter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: -.3em;;
+}
+
+.clientName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: yellow;
+
+  margin-top: 30px;
+  margin-bottom: -15px;
+}
+
+.inputClient {
+color: yellow;
+background: black;
+border: none;
+}
+
+/* #total {
+display: flex;
+flex-direction: row;
+
+margin-right: 60%;
+margin-top: 30px;
+
+font-size: 18px;
+font-weight: 700;
+}
+
+.totalLabel {
+color: yellow;
+}
+
+.totalInput {
+color: yellow;
+background: black;
+border: none;
+} */
+
+.inputNumItem {
+color: yellow;
+background: black;
+border: none;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+.container-buttons-order {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly; */
+  display: none;
+}
+
+/* .button-order {
+  border: 3px solid yellow;
+  background: none;
+
+  width: 340px;
+  height: 100px;
+
+  font-weight: 600;
+  font-size: 15px;
+  color: yellow;
+  cursor: pointer;
+  margin-bottom: 8px;
+} */
+
+/* .button-order:hover {
+  background: yellow;
+  color: black;
+}
+
+.active {
+  background: yellow;
+  color: black;
+}
+
+.active a{
+  background: yellow;
+  color: black;
+}
+
+A:link:hover {
+  color: black;
+} */
+
+.clientName {
+  font-weight: 600;
+
+  margin-top: -30px;
+}
+
+.main-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* margin-bottom: -30px; */
+}
+
+.box-menus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 440px;
+  height: 250px;
+
+  margin-bottom: -45px;
+}
+
+.button-box-menu {
+  width: 270px;
+  height: 80px;
+
+  border: 3px solid yellow;
+  background: none;
+}
+
+.button-box-menu p {
+  color: yellow;
+}
+
+.button-box-menu:hover {
+  background: yellow;
+}
+
+.button-box-menu:hover p {
+  color: black
+}
+ 
+/* #total {
+  margin: auto 0;
+  margin-top: 30px;
+
+  font-size: 18px;
+  font-weight: 700;
+} */
+
+}
+
+/* WAITER ORDERS */
+/* .logo-waiter {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -65,7 +345,6 @@
     height: 80px;
 
     margin-right: 30px;
-    /* margin-bottom: -20px; */
   }
 
   .button-box-menu {
@@ -182,48 +461,8 @@
 @media (min-width: 481px) and (max-width: 767px) {
 
   .container-buttons-order {
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly; */
     display: none;
   }
-
-  /* .button-order {
-    border: 3px solid yellow;
-    background: none;
-  
-    width: 340px;
-    height: 100px;
-  
-    font-weight: 600;
-    font-size: 15px;
-
-    color: yellow;
-
-    cursor: pointer;
-
-    margin-bottom: 8px;
-  } */
-  
-  /* .button-order:hover {
-    background: yellow;
-    color: black;
-  }
-  
-  .active {
-    background: yellow;
-    color: black;
-  }
-  
-  .active a{
-    background: yellow;
-    color: black;
-  }
-  
-  A:link:hover {
-    color: black;
-  } */
   
   .clientName {
     font-weight: 600;
@@ -275,4 +514,4 @@
     font-weight: 700;
   }
   
-}
+} */

@@ -4,13 +4,23 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
-  }
+    justify-content: center; 
+
+    width: 100%;
+  } 
   
   .box-pending-order h3, h4 {
-    text-align: center;
+    text-align: left;
+
+    margin-left: 50px;
   }
   
+  .timer-div {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+  }
+
   .timer {
     /* display: flex;
     align-items: flex-start;
@@ -21,8 +31,8 @@
     font-size: 15px;
     font-weight: 600;
 
-    background: black;
-    color: yellow;
+    background: yellow;
+    color: black;
 
     width: 130px;
     height: 20px;
@@ -30,39 +40,22 @@
     margin: 0 auto;
     margin-top: 75px;
   }
-
-  .done {
-    font-size: 17px;
-    font-weight: 700;
-  }
   
   .box-pending-order {
-    margin-top: 3em;
+    height: 100%;
+    width: 80%;
   
-    width: 370px;
-    height: 350px;
-  
-    background: yellow;
-  }
-  
-  .box-pending-order-product {
-    color: black;
+    border: 3px solid yellow;
+    background: none;
 
-    line-height: 30px;
-    font-size: 19px;
-    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 5px;
 
-    margin-left: 50px;
+    color: yellow;
+
+    padding: 10px;
   }
 
-  .box-pending-order-product {
-    list-style: none;
-
-    font-size: 18px;
-    font-weight: 400;
-    color: black;
-  }
-  
-  .margin-bottom {
-    margin-top: 3em;
+  .box-pending-order h4 {
+    color: yellow;
   }

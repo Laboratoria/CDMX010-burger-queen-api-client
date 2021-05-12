@@ -26,14 +26,14 @@ const NewOrder = (props) => {
       <div className="clientName"><label htmlFor="name">Name: Rosa Carranza</label></div>
       <input type="name" className="inputClient" />
       <div className="main-box">
-         <div className="box-menus">
+        <div className="box-menus">
           <button className='button-box-menu' onClick={handlerBreakfast}><p>Morning</p></button>
           <button className='button-box-menu' id="button-box-menu" onClick={handlerLunch}><p>All day</p></button>
-            <div id="total">
+            {/* <div id="total">
               <label htmlFor="value" className="totalLabel">Total: </label>
               <input type="value" className="totalInput"></input>
-            </div>
-         </div>
+            </div> */}
+        </div>
          {/* <div className="select-food-products"> */}
            <div className="products-line">
             { (Breakfast === true) &&
@@ -43,11 +43,12 @@ const NewOrder = (props) => {
               <ApiLunch lunch={props.lunch} handleAddItem={handleAddItem}/>
             } 
           </div>
-         {/* </div> */}
       </div>
+      <div id="total">
       <Order setList={props.setList} list={props.list}/>
-      <label htmlFor="value" className="totalLabel">Total: </label>
-      <input type="value" className="totalInput"></input>
+      {/* <label htmlFor="value" className="totalLabel">Total: </label>
+      <input type="value" className="totalInput"></input> */}
+      </div>
       <div className="box-send-waiter">
          <button type ="submit" className="button-send-waiter">Enviar</button>
       </div>
