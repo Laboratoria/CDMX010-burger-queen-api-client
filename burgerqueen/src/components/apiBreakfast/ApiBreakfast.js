@@ -1,34 +1,11 @@
-import React,{useState, useEffect} from "react";
-//import Orders from "../Order/Order"
+import Product from "../Product";
 
 import './apiBreakfast.css';
 
-const ApiBreakfast =()=>{
-    const url = 'http://localhost:5000/breakfast'
-    const [breakfast, setBreakfast] = useState([]);
-    const fetchApi = async() => {
-        const response = await fetch(url)
-        console.log(response.status)
-        //statusText
-        const data = await response.json()
-        setBreakfast(data)
-        console.log(data)
-    }
-        
-    useEffect(()=>{
-        fetchApi()
-    },[])
+const ApiBreakfast =(props)=>{
     return(
         <div className="select-food-products-2">
-            {
-                breakfast.map((items) => {
-                    return<div className='products-line-2'>
-                        <button className="button-products-2">${items.price} {items.item}</button>
-                        <button className="button-product-signal-2">-</button>
-                        <input type="value" className="inputNumItem"></input>
-                    </div>
-                })
-            }
+            {props.breakfast.map((item) => <Product  item={item} key={item.id}/>)}
         </div>
     )
 }

@@ -1,15 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 
 import NewOrder from '../../components/NewOrder/NewOrder';
-import Order from '../../components/Order/Order';
 
 import logo from '../../assets/logo-burgerqueen.png';
 
 const DashboardWaiter = () => {
     const [view, setView] = useState('new'); 
-    const [pending] = useState('pending');
-    const [done] = useState('done');
+    const [breakfast, setBreakfast] = useState([]);
+    const [lunch, setLunch] = useState([]);
+
+    useEffect(()=>{
+        fetch(`${process.env.REACT_APP_API_URL}/breakfast`)
+        .then(response => response.json())
+        .then(data => setBreakfast(data))
+    },[])
+        
+    useEffect(() =>{
+        fetch(`${process.env.REACT_APP_API_URL}/lunch`)
+            .then(response => response.json())
+            .then(data => setLunch(data))
+    },[])
 
     return (
         <div className="waiter-container">
@@ -28,13 +39,7 @@ const DashboardWaiter = () => {
                     </button>
             </div>
             { (view === 'new') &&
-                <NewOrder />
-            }
-            { (view === 'pending') &&
-                <Order pending={pending}/>
-            } 
-            { (view === 'done') &&
-                <Order done={done}/>
+                <NewOrder breakfast={breakfast} lunch={lunch} />
             }
         </div> 
     )

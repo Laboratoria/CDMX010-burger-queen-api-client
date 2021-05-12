@@ -5,9 +5,10 @@ import {
 } from "react-router-dom";
 import ApiBreakfast from "../apiBreakfast/ApiBreakfast"
 import ApiLunch from "../apiLunch/ApiLunch"
+import ObjectOrderLunch from "../crudAPI/CrudApiLunch";
 import './NewOrder.css';
 
-const NewOrder = () => {
+const NewOrder = (props) => {
   const [Breakfast, setBreakfast] = useState(true); 
   const [Lunch, setLunch] = useState(true); 
 
@@ -35,16 +36,16 @@ const NewOrder = () => {
          <div className="select-food-products">
            <div className="products-line">
             { (Breakfast === true) &&
-              <ApiBreakfast />
+              <ApiBreakfast breakfast={props.breakfast}/>
             }
             { (Lunch === true) &&
-              <ApiLunch />
+              <ApiLunch lunch={props.lunch}/>
             } 
           </div>
          </div>
       </div>
       <div className="box-send-waiter">
-         <button className="button-send-waiter">
+         <button type ="submit" className="button-send-waiter" onClick={ObjectOrderLunch}>
             <Link to="/doneOrder">ENVIAR</Link>
          </button>
       </div>
