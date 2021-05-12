@@ -41,12 +41,6 @@ const DashboardWaiter = () => {
             { (view === 'new') &&
                 <NewOrder breakfast={breakfast} lunch={lunch} />
             }
-            {/* { (view === 'pending') &&
-                <Order />
-            } 
-            { (view === 'done') &&
-                <Order />
-            } */}
         </div> 
     )
 };

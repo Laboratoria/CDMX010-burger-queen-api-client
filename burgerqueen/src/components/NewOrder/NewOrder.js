@@ -32,10 +32,10 @@ const NewOrder = (props) => {
          <div className="select-food-products">
            <div className="products-line">
             { (Breakfast === true) &&
-              <ApiBreakfast breakfast={props.breakfast} />
+              <ApiBreakfast breakfast={props.breakfast}/>
             }
             { (Lunch === true) &&
-              <ApiLunch lunch={props.lunch} />
+              <ApiLunch lunch={props.lunch}/>
             } 
           </div>
          </div>
