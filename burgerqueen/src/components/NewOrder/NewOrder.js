@@ -22,12 +22,16 @@ const NewOrder = (props) => {
 
   return (
     <div>
-      <label htmlFor="name" className="clientName">Name: </label>
+      <div className="clientName"><label htmlFor="name">Name:</label></div>
       <input type="name" className="inputClient" />
       <div className="main-box">
          <div className="box-menus">
           <button className='button-box-menu' onClick={handlerBreakfast}><p>Morning</p></button>
           <button className='button-box-menu' onClick={handlerLunch}><p>All day</p></button>
+            <div id="total">
+              <label htmlFor="value" className="totalLabel">Total: </label>
+              <input type="value" className="totalInput"></input>
+            </div>
          </div>
          <div className="select-food-products">
            <div className="products-line">
@@ -40,8 +44,6 @@ const NewOrder = (props) => {
           </div>
          </div>
       </div>
-      <label htmlFor="value" className="totalLabel">Total: </label>
-      <input type="value" className="totalInput"></input>
       <div className="box-send-waiter">
          <button type ="submit" className="button-send-waiter" onClick={ObjectOrderLunch}>
             <Link to="/doneOrder">ENVIAR</Link>
