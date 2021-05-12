@@ -1,0 +1,111 @@
+/* * {
+  box-sizing: border-box;
+}
+
+A:link {
+  text-decoration: none;
+  color: yellow;
+}
+
+body {
+  height: 100%;
+  
+  background: black;
+}
+
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -10%;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.Welcome {
+  border: 3px solid yellow;
+  background: none;
+  width: 170px;
+  height: 35px;
+  margin-top: .5em;
+}
+
+.inputLogin {
+  background: black;
+  border-color: yellow;
+  width: 170px;
+  height: 35px;
+  margin-top: .5em;
+}
+
+.checkboxLogin {
+  background: black;
+  color: yellow;
+  border-color: yellow;
+  width: 170px;
+  height: 35px;
+  margin-bottom: .15em;
+}
+
+.text-checkboxLogin {
+ text-align: center;
+}
+
+.formLogin {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* EMPIEZA NUEVA */
+/*
+#logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-waiter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.button-orders {
+  border: 3px solid yellow;
+  background: none;
+
+  width: 170px;
+  height: 35px;
+}
+
+.button-orders a {
+  color: yellow;
+}
+
+
+.button-orders:hover {
+  background: yellow;
+}
+
+.button-orders:hover a {
+  color: black;
+}
+
+A:link:hover {
+  color: black;
+}
+
+p {
+  margin-top: 2em;
+  text-align: center;
+  color: yellow;
+  font-size: 15px;
+} */
+
