@@ -5,7 +5,7 @@ import './apiBreakfast.css';
 const ApiBreakfast =(props)=>{
     return(
         <div className="select-food-products-2">
-            {props.breakfast.map((item) => <Product  item={item} key={item.id}/>)}
+            {props.breakfast.map((item) => <Product  item={item} key={item.id} handleAddItem={props.handleAddItem}/>)}
         </div>
     )
 }

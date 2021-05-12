@@ -1,11 +1,8 @@
 import React from "react";
 import { useState } from 'react';
-import {
-  BrowserRouter as Link,
-} from "react-router-dom";
 import ApiBreakfast from "../apiBreakfast/ApiBreakfast"
-import ApiLunch from "../apiLunch/ApiLunch"
-import ObjectOrderLunch from "../crudAPI/CrudApiLunch";
+import ApiLunch from "../apiLunch/ApiLunch";
+import Order from "../Order/Order";
 import './NewOrder.css';
 
 const NewOrder = (props) => {
@@ -20,6 +17,10 @@ const NewOrder = (props) => {
     setLunch(!Lunch);
   };
 
+  const handleAddItem = (item) => {
+    props.setList({...props.list, items:[...props.list.items,item]})
+  }
+
   return (
     <div>
       <label htmlFor="name" className="clientName">Name: </label>
@@ -32,20 +33,19 @@ const NewOrder = (props) => {
          <div className="select-food-products">
            <div className="products-line">
             { (Breakfast === true) &&
-              <ApiBreakfast breakfast={props.breakfast}/>
+              <ApiBreakfast breakfast={props.breakfast} handleAddItem={handleAddItem}/>
             }
             { (Lunch === true) &&
-              <ApiLunch lunch={props.lunch}/>
+              <ApiLunch lunch={props.lunch} handleAddItem={handleAddItem}/>
             } 
           </div>
          </div>
       </div>
+      <Order setList={props.setList} list={props.list}/>
       <label htmlFor="value" className="totalLabel">Total: </label>
       <input type="value" className="totalInput"></input>
       <div className="box-send-waiter">
-         <button type ="submit" className="button-send-waiter" onClick={ObjectOrderLunch}>
-            <Link to="/doneOrder">ENVIAR</Link>
-         </button>
+         <button type ="submit" className="button-send-waiter">Enviar</button>
       </div>
       
       {/* { (Breakfast === 'breakfast') &&
