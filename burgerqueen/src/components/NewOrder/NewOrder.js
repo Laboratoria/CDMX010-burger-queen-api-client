@@ -7,7 +7,7 @@ import './NewOrder.css';
 
 const NewOrder = (props) => {
   const [Breakfast, setBreakfast] = useState(true); 
-  const [Lunch, setLunch] = useState(true); 
+  const [Lunch, setLunch] = useState(false); 
 
   const handlerBreakfast = () => {
     setBreakfast(!Breakfast);
@@ -23,7 +23,7 @@ const NewOrder = (props) => {
 
   return (
     <div>
-      <div className="clientName"><label htmlFor="name">Name:</label></div>
+      <div className="clientName"><label htmlFor="name">Name: Rosa Carranza</label></div>
       <input type="name" className="inputClient" />
       <div className="main-box">
          <div className="box-menus">
@@ -34,7 +34,7 @@ const NewOrder = (props) => {
               <input type="value" className="totalInput"></input>
             </div>
          </div>
-         <div className="select-food-products">
+         {/* <div className="select-food-products"> */}
            <div className="products-line">
             { (Breakfast === true) &&
               <ApiBreakfast breakfast={props.breakfast} handleAddItem={handleAddItem}/>
@@ -43,7 +43,7 @@ const NewOrder = (props) => {
               <ApiLunch lunch={props.lunch} handleAddItem={handleAddItem}/>
             } 
           </div>
-         </div>
+         {/* </div> */}
       </div>
       <Order setList={props.setList} list={props.list}/>
       <label htmlFor="value" className="totalLabel">Total: </label>
