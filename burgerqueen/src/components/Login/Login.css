@@ -1,0 +1,94 @@
+/* WAITER LOGIN */
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 100px;
+}
+
+.logo-welcome img {
+  margin-bottom: -30px;
+  z-index: -5;
+}
+
+.logo-welcome h2{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  padding-bottom: 1em;
+
+  color: yellow;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.formLogin {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Welcome {
+  border: 3px solid yellow;
+  background: black;
+  width: 170px;
+  height: 35px;
+  margin-top: .7em;
+
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.Welcome a{
+  color: yellow;
+}
+
+.Welcome:hover {
+  background: yellow;
+  color: black;
+}
+
+.Welcome:hover a {
+  color: black;
+}
+
+.inputLogin {
+  background: black;
+  border-color: yellow;
+  width: 170px;
+  height: 35px;
+  margin-top: .7em;
+
+  color: yellow;
+}
+
+.checkboxLogin {
+  background: black;
+  border-color: yellow;
+  width: 170px;
+  height: 35px;
+  margin-top: .7em;
+  
+  color: yellow;
+}
+
+/* format input */
+
+input {
+  font-size: .8em;
+  color: yellow;
+  font-weight: 300;
+  display: inline-block;
+  transition: all .5s;
+  cursor: pointer;
+  width: fit-content;
+  text-align: center;
+}
+
+input::placeholder{
+  color: yellow;
+}
