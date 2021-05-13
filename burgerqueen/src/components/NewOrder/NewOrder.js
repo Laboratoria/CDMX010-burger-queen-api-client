@@ -3,6 +3,7 @@ import { useState } from 'react';
 import ApiBreakfast from "../apiBreakfast/ApiBreakfast"
 import ApiLunch from "../apiLunch/ApiLunch";
 import Order from "../Order/Order";
+import total from "../total";
 import './NewOrder.css';
 
 const NewOrder = (props) => {
@@ -46,8 +47,8 @@ const NewOrder = (props) => {
          {/* </div> */}
       </div>
       <Order setList={props.setList} list={props.list}/>
-      <label htmlFor="value" className="totalLabel">Total: </label>
-      <input type="value" className="totalInput"></input>
+      <label htmlFor="value" className="totalLabel" value={props.list.length}>Total: </label>
+      <input type="value" className="totalInput" value={total}></input>
       <div className="box-send-waiter">
          <button type ="submit" className="button-send-waiter">Enviar</button>
       </div>
