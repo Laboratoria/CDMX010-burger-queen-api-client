@@ -9,5 +9,3 @@ const ApiBreakfast =(props)=>{
 }
 
 export default ApiBreakfast;
-
-//className="select-food-products"className="margin-bottom"
