@@ -11,11 +11,6 @@ const DashboardWaiter = (props) => {
     // function handleLogout(e) {
     //     auth.singOut().then(() => console.log('signout'))
     // }
-
-    if (!props.user) {
-        return <Redirect to="/" />
-    }
-
     const [view, setView] = useState('new'); 
     const [breakfast, setBreakfast] = useState([]);
     const [lunch, setLunch] = useState([]);
@@ -37,6 +32,13 @@ const DashboardWaiter = (props) => {
             .then(response => response.json())
             .then(data => setLunch(data))
     },[])
+
+    // El renderizado condicional debe venir por buena practica al final de useEffect, useState y otras funciones
+    // Leer esta docs sobre Hooks rules: https://reactjs.org/docs/hooks-rules.html#only-call-hooks-at-the-top-level
+    if (!props.user) {
+        return <Redirect to="/" />
+    }
+
 
     return (
         <div className="waiter-container">
