@@ -4,17 +4,17 @@ import React, { useEffect, useState } from 'react';
 import NewOrder from '../../components/NewOrder/NewOrder';
 
 import logo from '../../assets/logo-burgerqueen.png';
+import { Redirect } from 'react-router-dom';
 
 
-const DashboardWaiter = () => {
+const DashboardWaiter = (props) => {
     // function handleLogout(e) {
     //     auth.singOut().then(() => console.log('signout'))
     // }
 
-    // if (!props.user) {
-    //     console.log('here', props.user)
-    //     return <Redirect to="/" />
-    // }
+    if (!props.user) {
+        return <Redirect to="/" />
+    }
 
     const [view, setView] = useState('new'); 
     const [breakfast, setBreakfast] = useState([]);

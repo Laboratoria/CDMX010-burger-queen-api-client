@@ -28,14 +28,14 @@ const Login = (props) => {
   }
 
   function handleSubmit(e) {
-    e.prevetDefault()
+    e.preventDefault()
     auth.signInWithEmailAndPassword(inputs.email, inputs.password)
       // .then((user) => console.log('logged in'))
   }
 
   if (props.user) {
-    console.log('here', props.user)
-    return <Redirect to="/DashboardWaiter" />
+    // to debe hacer referencia al path de la ruta, no al nombre del componente. Mirar sus rutas
+    return <Redirect to="/dashboard-waiter" />
   }
 
   return (
