@@ -94,6 +94,7 @@ input {
   text-align: center;
 }
 
+/* cambiar el color del placeholder, este no puede ser del mismo color que el texto */
 input::placeholder{
   color: yellow;
 }
