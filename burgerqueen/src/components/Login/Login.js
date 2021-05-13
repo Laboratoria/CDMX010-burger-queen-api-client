@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { useState } from "react";
+import { Redirect } from "react-router"
+
 import { auth } from '../../firebase';
 // import {
 //   BrowserRouter as Router, Link,
@@ -16,6 +18,7 @@ const initialInputs = {
 }
 
 const Login = (props) => {
+
   const [inputs, setInputs] = useState(initialInputs)
 
   function handleOnChange(e) {
@@ -30,9 +33,10 @@ const Login = (props) => {
       // .then((user) => console.log('logged in'))
   }
 
-  // if (props.user) {
-  //   return <Redirect to="/DashboardWaiter" />
-  // }
+  if (props.user) {
+    console.log('here', props.user)
+    return <Redirect to="/DashboardWaiter" />
+  }
 
   return (
     <div className='login-container'>
