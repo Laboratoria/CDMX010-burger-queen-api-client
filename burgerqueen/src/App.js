@@ -1,4 +1,8 @@
-import React from "react";
+// import React from "react";
+import React from 'react';
+import { useEffect, useState } from "react";
+import { auth } from './firebase';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,20 +15,37 @@ import DashboardWaiter from "./pages/DashboardWaiter/DashboardWaiter";
 import './App.css';
 
 export default function App() {
+  const [user, setUser] = useState(null)
+
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      if (user) {
+        console.log('user is logged in')
+        setUser(user)
+      } else {
+        console.log('user is logged out')
+        setUser(false)
+      }
+    })
+  }, [])
+
   return (
-    <Router>
-        <Switch>
-          <Route path="/dashboard-waiter">
-            <DashboardWaiter />
-          </Route>
-          <Route path="/">
-            <Login />
-          </Route>
-        </Switch>
-    </Router>
+    <>
+     {user !== null ? (
+        <Router>
+          <Switch>
+            <Route path="/" exact>
+              <Login user={user}/>
+            </Route>
+            <Route path="/dashboard-waiter">
+              <DashboardWaiter user={user}/>
+            </Route>
+          </Switch>
+      </Router>
+     ) : <p>Loading ...</p>
+     }
+    </> 
   );
 };
 
-  // si vamos a usar clases de React, conocer bien sobre componentes de clase, de react//
-  // cambiar componente de clase por componente de función / TENER FUNCIONES DENTRO DE UNA FUNCION Y EL RETURN DIRECTO / EL CONSTRUCTOR
-  // TAMPOCO EXITE / DE THIS.STATE A USE.STATE / LEER SOBRE STATE DE REACT
+//observer

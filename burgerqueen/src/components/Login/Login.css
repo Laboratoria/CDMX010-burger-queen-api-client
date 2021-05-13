@@ -35,12 +35,17 @@
 .Welcome {
   border: 3px solid yellow;
   background: black;
+  color: yellow;
+
   width: 170px;
   height: 35px;
+  
   margin-top: .7em;
 
   font-weight: 600;
   font-size: 15px;
+
+  cursor: pointer;
 }
 
 .Welcome a{

@@ -1,14 +1,39 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
-import {
-  BrowserRouter as Router, Link,
-} from "react-router-dom";
+import React from 'react';
+import { useState } from "react";
+import { auth } from '../../firebase';
+// import {
+//   BrowserRouter as Router, Link,
+// } from "react-router-dom";
 
 import logo from '../../assets/logo-burgerqueen.png';
 
 import './Login.css';
 
-const Login = () => {
+const initialInputs = {
+  email: '',
+  password:''
+}
+
+const Login = (props) => {
+  const [inputs, setInputs] = useState(initialInputs)
+
+  function handleOnChange(e) {
+    const {id, value} = e.target
+    const newValue = {...inputs, [id]:value}
+    setInputs(newValue)
+  }
+
+  function handleSubmit(e) {
+    e.prevetDefault()
+    auth.signInWithEmailAndPassword(inputs.email, inputs.password)
+      // .then((user) => console.log('logged in'))
+  }
+
+  // if (props.user) {
+  //   return <Redirect to="/DashboardWaiter" />
+  // }
+
   return (
     <div className='login-container'>
       <div className='logo-welcome'>
@@ -16,10 +41,11 @@ const Login = () => {
           <h2>¡Bienvenidxs!</h2>
       </div>
       <div className='form-container'>
-        <form className='formLogin'>
-            <input type='text' className='inputLogin' placeholder="miri@queen.com"></input>
-            <input type='password' className='inputLogin' placeholder="********"></input>
-            <button className='Welcome'><Link to="/dashboard-waiter">SUBMIT</Link></button>
+        <form className='formLogin' onSubmit={handleSubmit}>
+            <input id='email' type='email' className='inputLogin' value={inputs.email} onChange={handleOnChange} placeholder="miri@queen.com"></input>
+            <input id='password' className='inputLogin' type='password' value={inputs.password} onChange={handleOnChange} placeholder="********"></input>
+            <button type="submit" value="Log in" className='Welcome'>SUBMIT</button>
+            {/* <button className='Welcome'><Link to="/dashboard-waiter">SUBMIT</Link></button> */}
         </form>
       </div>
     </div>
@@ -27,3 +53,5 @@ const Login = () => {
 };
 
 export default Login;
+
+//metodos
