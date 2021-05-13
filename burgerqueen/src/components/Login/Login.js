@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { useState } from "react";
+import { Redirect } from "react-router"
+
 import { auth } from '../../firebase';
 // import {
 //   BrowserRouter as Router, Link,
@@ -16,6 +18,7 @@ const initialInputs = {
 }
 
 const Login = (props) => {
+
   const [inputs, setInputs] = useState(initialInputs)
 
   function handleOnChange(e) {
@@ -25,14 +28,15 @@ const Login = (props) => {
   }
 
   function handleSubmit(e) {
-    e.prevetDefault()
+    e.preventDefault()
     auth.signInWithEmailAndPassword(inputs.email, inputs.password)
       // .then((user) => console.log('logged in'))
   }
 
-  // if (props.user) {
-  //   return <Redirect to="/DashboardWaiter" />
-  // }
+  if (props.user) {
+    // to debe hacer referencia al path de la ruta, no al nombre del componente. Mirar sus rutas
+    return <Redirect to="/dashboard-waiter" />
+  }
 
   return (
     <div className='login-container'>
