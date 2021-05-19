@@ -30,12 +30,7 @@ const NewOrder = (props) => {
           <div className="box-menus">
             <button className='button-box-menu' onClick={handlerBreakfast}><p>Morning</p></button>
             <button className='button-box-menu' id="button-box-menu" onClick={handlerLunch}><p>All day</p></button>
-              {/* <div id="total">
-                <label htmlFor="value" className="totalLabel">Total: </label>
-                <input type="value" className="totalInput"></input>
-              </div> */}
           </div>
-          {/* <div className="select-food-products"> */}
           <div className="products-line">
             { (Breakfast === true) &&
               <ApiBreakfast breakfast={props.breakfast} handleAddItem={handleAddItem}/>
@@ -47,15 +42,12 @@ const NewOrder = (props) => {
         </div>
         <div id="total">
           <Order setList={props.setList} list={props.list}/>
-          <label htmlFor="value" className="totalLabel" value={props.list.length}>Total: </label>
-          <input type="value" className="totalInput" value={total}></input>
+          <label htmlFor="value" className="totalLabel" value={props.list.length}>Total:</label>
+          <input type="value" className="totalInput" value={total}/>
           <div className="box-send-waiter">
             <button type ="submit" className="button-send-waiter">Enviar</button>
           </div>
       </div>
-        {/* { (Breakfast === 'breakfast') &&
-            <Order done={done}/>
-        } */}
     </div>
 )
 };

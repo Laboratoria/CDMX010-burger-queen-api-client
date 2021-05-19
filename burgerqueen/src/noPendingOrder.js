@@ -43,8 +43,6 @@ export default function App() {
               <Link to="/doneOrder">ENVIAR</Link>
             </button>
          </div>
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
         <Switch>
           <Route path="/pendingOrder">
             <About />
@@ -75,61 +73,3 @@ function About() {
 function Users() {
   return <h2>Users</h2>;
 }
-
-// function pendingOrder() {
-//   let match = useRouteMatch();
-//   return (
-//   <div>
-//     <h2>Topics</h2>
-//     <ul>
-//       <li>
-//         <link to=
-//         {`${match.url}/components`}>Components</link>
-//       </li>
-//       <li>
-//         <link to={`${match.url}/props-v-state`}>
-//           Props v. State
-//         </link>
-//       </li>
-//     </ul>
-//   </div>)
-// }
-
-
-
-//import logo from './logo.svg'; 
-// import React, { useState } from "react";
-// import styled from "styled-components";
-// import logo from './assets/logo-burguerqueen.png';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <div id="ButtonWaiter">
-//           <button>New Order</button>
-//           <button>Pending Order</button>
-//           <button>Done Order</button>
-//         </div>
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-
-/*<img src={'./assets/logo-burguerqueen.png'}/>*/

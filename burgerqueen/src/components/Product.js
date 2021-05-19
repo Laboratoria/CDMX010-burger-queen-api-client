@@ -10,5 +10,5 @@ const Product = (props) => {
             <input type="number" className="inputNumItem" id="inputNumItem" min='0' value={count} onChange={(e)=> setCount(e.target.value)}></input>
         </div>)
 }
-//imput de tipo
+
 export default Product;

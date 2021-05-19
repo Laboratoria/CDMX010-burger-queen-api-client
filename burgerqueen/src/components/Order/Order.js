@@ -4,7 +4,6 @@ import Timer from "./Timer";
 
 import './Orders.css';
 
-//El props va solo.
 const Order = (props) => {
 
     return (
@@ -17,7 +16,6 @@ const Order = (props) => {
                     <h4>Total:</h4>
                 </div>
             </div>
-            {/* <div className="margin-bottom"></div> */}
         </>
     )
 };

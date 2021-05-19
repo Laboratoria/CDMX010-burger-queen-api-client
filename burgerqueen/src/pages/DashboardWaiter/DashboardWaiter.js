@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import { auth } from '../firebase';
 
 import NewOrder from '../../components/NewOrder/NewOrder';
 
@@ -8,9 +7,6 @@ import { Redirect } from 'react-router-dom';
 
 
 const DashboardWaiter = (props) => {
-    // function handleLogout(e) {
-    //     auth.singOut().then(() => console.log('signout'))
-    // }
     const [view, setView] = useState('new'); 
     const [breakfast, setBreakfast] = useState([]);
     const [lunch, setLunch] = useState([]);
@@ -33,8 +29,6 @@ const DashboardWaiter = (props) => {
             .then(data => setLunch(data))
     },[])
 
-    // El renderizado condicional debe venir por buena practica al final de useEffect, useState y otras funciones
-    // Leer esta docs sobre Hooks rules: https://reactjs.org/docs/hooks-rules.html#only-call-hooks-at-the-top-level
     if (!props.user) {
         return <Redirect to="/" />
     }
@@ -55,16 +49,10 @@ const DashboardWaiter = (props) => {
                     <button className="button-order" onClick={()=> setView('done')}>
                         Done Order
                     </button>
-                    {/* <button className="button-order" onClick={()=> setView('done')}>
-                        Close
-                    </button> */}
             </div>
             { (view === 'new') &&
                 <NewOrder breakfast={breakfast} lunch={lunch} setList={setList} list={list}/>
             }
-            {/* { (view === 'pending') &&
-                <Order setList={setList} list={list} />
-            } */}
         </div> 
     )
 };
