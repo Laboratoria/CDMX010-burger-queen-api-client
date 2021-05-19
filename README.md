@@ -7,6 +7,11 @@ Here my final website made with React, CSS and HTML.
 <img src="src/img/02.png" width="870" height="465"/>
 <img src="src/img/02.png" width="870" height="465"/>
 
+## Aquí una primera vista para mobile.
+Here a first approach to the mobile version.
+
+<img src="src/img/05.png" width="870" height="465"/>
+
 ## Índice
 
 * [1. Preámbulo](#1-preámbulo)
